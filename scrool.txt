@@ -1,0 +1,46 @@
+?---------------- html-------------------
+    <a
+      href="#"
+      class="srollup"
+      id="scroll-up">
+      <i class="bx bx-chevrons-up"></i>
+    </a>
+
+
+!----------------css--------------------
+
+.srollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: color;
+  box-shadow: shadow;
+  display: inline-flex;
+  padding: 0.35rem;
+  border-radius: 0.25rem;
+  color: color;
+  font-size: 1.25rem;
+  z-index: 2;
+  transition: 0.3s;
+ 
+}
+.srollup:hover {
+  transform: translateY(-0.25rem);
+  color: color;
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+  bottom: 8rem;
+}
+
+todo---------------------js-------------
+
+const scrollUp = () => {
+  const scrollUp = document.getElementById('scroll-up');
+  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+  this.scrollY >= 350
+    ? scrollUp.classList.add('show-scroll')
+    : scrollUp.classList.remove('show-scroll');
+};
+window.addEventListener('scroll', scrollUp);
